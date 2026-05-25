@@ -21,10 +21,10 @@ export default function Home() {
             I work on both sides of that gap. Currently at Amazon, on tools millions of sellers use.
           </p>
           <div className="flex items-center gap-4">
-            <Button size="lg" className="normal-case tracking-normal text-sm" render={<a href="#work" />}>
+            <Button size="lg" className="normal-case tracking-normal text-sm" render={<a href="#work" />} nativeButton={false}>
               See the work →
             </Button>
-            <Button size="lg" variant="outline" className="normal-case tracking-normal text-sm" render={<a href="/about" />}>
+            <Button size="lg" variant="outline" className="normal-case tracking-normal text-sm" render={<a href="/about" />} nativeButton={false}>
               About
             </Button>
           </div>
