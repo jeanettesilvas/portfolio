@@ -1,7 +1,7 @@
-import { Nav } from "@/components/nav";
-import { TableOfContents } from "@/components/work/toc";
-import { CaseStudyTabs } from "@/components/work/case-study-tabs";
-import { cn } from "@/lib/utils";
+import { Nav } from "@/components/nav"
+import { TableOfContents } from "@/components/work/toc"
+import { CaseStudyTabs } from "@/components/work/case-study-tabs"
+import { cn } from "@/lib/utils"
 
 const tocSections = [
   { id: "problem", label: "Problem" },
@@ -11,22 +11,22 @@ const tocSections = [
   { id: "decisions", label: "Decisions" },
   { id: "outcome", label: "Outcome" },
   { id: "retrospective", label: "Retrospective" },
-];
+]
 
-const stack = ["React · TS", "Tailwind", "Figma"];
+const stack = ["React · TS", "Tailwind", "Figma"]
 
 const outcomes = [
   { stat: "↓34%", label: "upload errors" },
   { stat: "↑2.1x", label: "completion rate" },
   { stat: "↓18%", label: "support tickets" },
-];
+]
 
 function Placeholder({
   label,
   className,
 }: {
-  label?: string;
-  className?: string;
+  label?: string
+  className?: string
 }) {
   return (
     <div
@@ -43,13 +43,11 @@ function Placeholder({
         </span>
       )}
     </div>
-  );
+  )
 }
 
 function SectionLabel({ n }: { n: string }) {
-  return (
-    <p className="text-sm text-muted-foreground mb-1 font-mono">{n}</p>
-  );
+  return <p className="text-sm text-muted-foreground mb-1 font-mono">{n}</p>
 }
 
 export default function BulkUploadPage() {
@@ -97,7 +95,7 @@ export default function BulkUploadPage() {
               </div>
               <Placeholder
                 label="annotated screenshot of old flow"
-                className="aspect-[16/9] w-full"
+                className="aspect-video w-full"
               />
             </section>
 
@@ -109,9 +107,36 @@ export default function BulkUploadPage() {
               </h2>
               <CaseStudyTabs
                 tabs={[
-                  { value: "figma", label: "Figma", content: <Placeholder label="figma frame" className="aspect-[16/9] w-full" /> },
-                  { value: "code", label: "Code", content: <Placeholder label="code snapshot" className="aspect-[16/9] w-full" /> },
-                  { value: "split", label: "Split", content: <Placeholder label="split view" className="aspect-[16/9] w-full" /> },
+                  {
+                    value: "figma",
+                    label: "Figma",
+                    content: (
+                      <Placeholder
+                        label="figma frame"
+                        className="aspect-video w-full"
+                      />
+                    ),
+                  },
+                  {
+                    value: "code",
+                    label: "Code",
+                    content: (
+                      <Placeholder
+                        label="code snapshot"
+                        className="aspect-video w-full"
+                      />
+                    ),
+                  },
+                  {
+                    value: "split",
+                    label: "Split",
+                    content: (
+                      <Placeholder
+                        label="split view"
+                        className="aspect-video w-full"
+                      />
+                    ),
+                  },
                 ]}
               />
             </section>
@@ -127,7 +152,9 @@ export default function BulkUploadPage() {
                     className="border border-border rounded-sm p-6 text-center"
                   >
                     <p className="font-heading font-bold text-4xl">{stat}</p>
-                    <p className="text-sm text-muted-foreground mt-2">{label}</p>
+                    <p className="text-sm text-muted-foreground mt-2">
+                      {label}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -142,7 +169,9 @@ export default function BulkUploadPage() {
             ].map(({ n, id, label }) => (
               <section key={id} id={id}>
                 <SectionLabel n={n} />
-                <h2 className="font-heading font-bold text-4xl mb-6">{label}</h2>
+                <h2 className="font-heading font-bold text-4xl mb-6">
+                  {label}
+                </h2>
                 <div className="space-y-2">
                   <div className="h-px bg-border w-full" />
                   <div className="h-px bg-border w-3/4" />
@@ -154,5 +183,5 @@ export default function BulkUploadPage() {
         </div>
       </div>
     </>
-  );
+  )
 }

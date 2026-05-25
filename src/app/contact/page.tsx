@@ -1,4 +1,4 @@
-import { Nav } from "@/components/nav";
+import { Nav } from "@/components/nav"
 
 const links = [
   {
@@ -16,7 +16,7 @@ const links = [
     display: "@jeanettesilvas",
     href: "https://github.com/jeanettesilvas",
   },
-];
+]
 
 export default function ContactPage() {
   return (
@@ -32,7 +32,8 @@ export default function ContactPage() {
             Hiring for design engineering?
           </h1>
           <p className="text-muted-foreground max-w-md leading-relaxed">
-            I'm moving toward design engineering full-time. Let's talk.
+            I&apos;m moving toward design engineering full-time. Let&apos;s
+            talk.
           </p>
         </header>
 
@@ -58,5 +59,5 @@ export default function ContactPage() {
         </div>
       </main>
     </>
-  );
+  )
 }

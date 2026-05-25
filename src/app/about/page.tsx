@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { Nav } from "@/components/nav";
+import Image from "next/image"
+import { Nav } from "@/components/nav"
 
 const principles = [
   {
@@ -22,36 +22,36 @@ const principles = [
     title: "Ship to learn.",
     body: "A component in production teaches you more than a month in Figma.",
   },
-];
+]
 
-const stack = ["React · TypeScript", "Tailwind", "Figma"];
+const stack = ["React · TypeScript", "Tailwind", "Figma"]
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">
       {children}
     </p>
-  );
+  )
 }
 
-function Placeholder({ label, className }: { label?: string; className?: string }) {
-  return (
-    <div
-      className={`flex items-center justify-center rounded-sm ${className}`}
-      style={{
-        backgroundImage:
-          "repeating-linear-gradient(-45deg, transparent, transparent 6px, oklch(0.9 0.003 34.3) 6px, oklch(0.9 0.003 34.3) 7px)",
-        backgroundColor: "oklch(0.96 0.002 17.2)",
-      }}
-    >
-      {label && (
-        <span className="font-sans italic text-sm text-muted-foreground bg-background/80 px-2 py-1 rounded">
-          {label}
-        </span>
-      )}
-    </div>
-  );
-}
+// function Placeholder({ label, className }: { label?: string; className?: string }) {
+//   return (
+//     <div
+//       className={`flex items-center justify-center rounded-sm ${className}`}
+//       style={{
+//         backgroundImage:
+//           "repeating-linear-gradient(-45deg, transparent, transparent 6px, oklch(0.9 0.003 34.3) 6px, oklch(0.9 0.003 34.3) 7px)",
+//         backgroundColor: "oklch(0.96 0.002 17.2)",
+//       }}
+//     >
+//       {label && (
+//         <span className="font-sans italic text-sm text-muted-foreground bg-background/80 px-2 py-1 rounded">
+//           {label}
+//         </span>
+//       )}
+//     </div>
+//   );
+// }
 
 export default function AboutPage() {
   return (
@@ -70,10 +70,10 @@ export default function AboutPage() {
                 The handoff is where products lose fidelity.
               </h1>
               <p className="text-base leading-relaxed text-muted-foreground max-w-xl">
-                I work on both sides of that gap. At Amazon that's meant owning
-                two of our team's most-used features end-to-end — Figma
-                explorations, frontend spec, React + TypeScript implementation.
-                Same head, both sides.
+                I work on both sides of that gap. At Amazon that&apos;s meant
+                owning two of our team&apos;s most-used features end-to-end —
+                Figma explorations, frontend spec, React + TypeScript
+                implementation. Same head, both sides.
               </p>
             </header>
 
@@ -105,7 +105,7 @@ export default function AboutPage() {
           {/* Right column */}
           <aside className="space-y-8 md:pt-10">
             {/* Portrait */}
-            <div className="relative aspect-[4/5] w-full rounded-sm overflow-hidden">
+            <div className="relative aspect-4/5 w-full rounded-sm overflow-hidden">
               <Image
                 src="/portrait.jpeg"
                 alt="Jeanette Silvas"
@@ -143,5 +143,5 @@ export default function AboutPage() {
         </div>
       </main>
     </>
-  );
+  )
 }
