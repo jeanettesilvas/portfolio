@@ -5,22 +5,22 @@ const experience = [
   {
     company: "Amazon",
     role: "Product Image Experience · design + frontend",
-    years: "2021 — now",
+    years: "2023 — now",
   },
   {
     company: "AWS",
     role: "Frontend engineer",
-    years: "2019 — 2021",
+    years: "2022 — 2023",
   },
   {
     company: "InVision",
-    role: "Design technologist",
-    years: "2016 — 2019",
+    role: "Lead software engineer",
+    years: "2018 — 2022",
   },
   {
     company: "Expedia",
-    role: "Frontend engineer",
-    years: "2014 — 2016",
+    role: "Senior UI Engineer",
+    years: "2013 — 2018",
   },
 ];
 
@@ -28,14 +28,11 @@ const stack = [
   "React · TypeScript · Next.js",
   "Tailwind CSS · CSS-in-JS",
   "Figma · design systems",
-  "Node.js · Supabase",
 ];
 
 const education = [
-  "B.S. Computer Science",
-  "University of Washington, 2014",
-  "",
-  "AWS Certified Developer",
+  "B.S. Bioengineering",
+  "Texas A&M University",
 ];
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -58,7 +55,7 @@ export default function ResumePage() {
               Jeanette Silvas
             </h1>
             <p className="text-muted-foreground">
-              Design engineer · Seattle · jeanettesilvas.dev@gmail.com
+              Design engineer · Austin · jeanettesilvas.dev@gmail.com
             </p>
           </div>
           <div className="print:hidden">
@@ -97,7 +94,7 @@ export default function ResumePage() {
           </section>
 
           <section>
-            <SectionLabel>Education / Etc</SectionLabel>
+            <SectionLabel>Education</SectionLabel>
             <div className="border-t border-border mb-4" />
             <ul className="space-y-2 text-sm text-muted-foreground">
               {education.filter(Boolean).map((item) => (
