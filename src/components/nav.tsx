@@ -7,7 +7,7 @@ const links = [
   { label: "Contact", href: "/contact" },
 ];
 
-export function Nav({ active = "Work" }: { active?: string }) {
+export function Nav({ active }: { active?: string }) {
   return (
     <nav className="flex items-center justify-between px-8 py-6 md:px-12">
       <Link href="/" className="text-xl font-bold tracking-tight">

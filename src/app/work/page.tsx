@@ -3,22 +3,22 @@ import { Nav } from "@/components/nav";
 
 const projects = [
   {
-    year: "2024",
     title: "Bulk Upload",
-    meta: "Amazon · design + eng",
-    cta: { label: "Case study →", href: "/work/bulk-upload" },
-  },
-  {
-    year: "2023",
-    title: "Image Manager",
-    meta: "Amazon · design + eng",
-    cta: { label: "Case study →", href: "/work/image-manager" },
-  },
-  {
+    company: "Amazon",
     year: "2025",
+    href: "/work/bulk-upload",
+  },
+  {
+    title: "Image Manager",
+    company: "Amazon",
+    year: "2026",
+    href: "/work/image-manager",
+  },
+  {
     title: "Craft Log",
-    meta: "Personal · live app",
-    cta: { label: "Live · craftlog.app →", href: "https://craftlog.app" },
+    company: "Personal",
+    year: "2026",
+    href: "https://craftlog.app",
   },
 ];
 
@@ -28,35 +28,45 @@ export default function WorkPage() {
       <Nav active="Work" />
       <main className="px-8 md:px-12 pb-24">
         {/* Header */}
-        <header className="pt-8 pb-10">
-          <h1 className="font-heading font-bold text-5xl md:text-6xl tracking-tight mb-3">
-            Selected work, 2014 — now.
-          </h1>
-          <p className="text-muted-foreground">
-            Three I owned end-to-end. Resume covers the rest.
+        <header className="pt-8 pb-12">
+          <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">
+            Work
           </p>
+          <h1 className="font-heading font-bold text-5xl md:text-6xl tracking-tight">
+            Selected work.
+          </h1>
         </header>
 
-        {/* List */}
-        <div>
-          <div className="border-t border-border" />
-          {projects.map(({ year, title, meta, cta }) => (
-            <div key={title}>
-              <Link
-                href={cta.href}
-                className="group grid grid-cols-[80px_1fr_auto] md:grid-cols-[100px_1fr_220px_200px] items-center gap-6 py-8 hover:opacity-70 transition-opacity"
-              >
-                <span className="text-sm text-muted-foreground">{year}</span>
-                <span className="font-heading font-bold text-3xl md:text-4xl">
-                  {title}
-                </span>
-                <span className="hidden md:block text-muted-foreground text-sm">
-                  {meta}
-                </span>
-                <span className="text-sm font-medium text-right">{cta.label}</span>
-              </Link>
-              <div className="border-t border-border" />
-            </div>
+        {/* Card grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {projects.map(({ title, company, year, href }) => (
+            <Link
+              key={title}
+              href={href}
+              target={href.startsWith("http") ? "_blank" : undefined}
+              rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+              className="border border-border rounded-sm overflow-hidden hover:opacity-80 transition-opacity block"
+            >
+              {/* Placeholder image */}
+              <div
+                className="w-full aspect-[4/3]"
+                style={{
+                  backgroundImage:
+                    "repeating-linear-gradient(-45deg, transparent, transparent 6px, oklch(0.9 0.003 34.3) 6px, oklch(0.9 0.003 34.3) 7px)",
+                  backgroundColor: "oklch(0.96 0.002 17.2)",
+                }}
+              />
+              {/* Card footer */}
+              <div className="px-5 pt-4 pb-5">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="font-heading font-bold text-xl">{title}</span>
+                  <span className="text-sm text-muted-foreground">
+                    {company} · {year}
+                  </span>
+                </div>
+                <div className="border-t border-border" />
+              </div>
+            </Link>
           ))}
         </div>
       </main>

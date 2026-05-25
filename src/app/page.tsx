@@ -11,7 +11,7 @@ const projects = [
 export default function Home() {
   return (
     <>
-      <Nav active="Work" />
+      <Nav />
       <main className="px-8 md:px-12">
         {/* Hero */}
         <section className="pt-8 pb-20">
