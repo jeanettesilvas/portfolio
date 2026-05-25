@@ -1,0 +1,68 @@
+import { Nav } from "@/components/nav";
+
+const links = [
+  {
+    label: "Email",
+    display: "jeanettesilvas.dev@gmail.com",
+    href: "mailto:jeanettesilvas.dev@gmail.com",
+  },
+  {
+    label: "LinkedIn",
+    display: "/in/jeanette-silvas",
+    href: "https://linkedin.com/in/jeanette-silvas",
+  },
+  {
+    label: "GitHub",
+    display: "@jeanettesilvas",
+    href: "https://github.com/jeanettesilvas",
+  },
+  {
+    label: "Read.cv",
+    display: "/jeanette",
+    href: "https://read.cv/jeanette",
+  },
+];
+
+export default function ContactPage() {
+  return (
+    <>
+      <Nav active="Contact" />
+      <main className="px-8 md:px-12 pb-24">
+        {/* Header */}
+        <header className="pt-8 pb-12">
+          <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">
+            Contact
+          </p>
+          <h1 className="font-heading font-bold text-5xl md:text-6xl tracking-tight leading-[1.05] mb-6 max-w-lg">
+            Hiring for design engineering?
+          </h1>
+          <p className="text-muted-foreground max-w-md leading-relaxed">
+            I'm moving toward design engineering full-time. Send me what you're
+            working on.
+          </p>
+        </header>
+
+        {/* Contact links */}
+        <div>
+          {links.map(({ label, display, href }) => (
+            <div key={label}>
+              <div className="border-t border-border" />
+              <a
+                href={href}
+                target={href.startsWith("mailto") ? undefined : "_blank"}
+                rel="noopener noreferrer"
+                className="grid grid-cols-[160px_1fr] items-center gap-6 py-5 group hover:opacity-70 transition-opacity"
+              >
+                <span className="text-xs uppercase tracking-widest text-muted-foreground">
+                  {label}
+                </span>
+                <span className="text-base font-medium">{display}</span>
+              </a>
+            </div>
+          ))}
+          <div className="border-t border-border" />
+        </div>
+      </main>
+    </>
+  );
+}
