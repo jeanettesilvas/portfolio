@@ -18,7 +18,7 @@ const stack = ["React · TS", "Tailwind", "Figma"]
 const outcomes = [
   { stat: "↓34%", label: "upload errors" },
   { stat: "↑2.1x", label: "completion rate" },
-  { stat: "↓18%", label: "support tickets" },
+  { stat: "↓20%", label: "support tickets" },
 ]
 
 function Placeholder({
