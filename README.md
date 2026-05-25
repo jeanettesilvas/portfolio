@@ -35,4 +35,3 @@ public/         # Static assets
 - **Homepage project cards** — same hatched placeholders, same need
 - **Bulk Upload case study** — Problem section copy and screenshot, Figma ⇔ Code assets, and the Constraints / Explorations / Decisions / Retrospective sections are all placeholder
 - **Image Manager case study** — page doesn't exist yet
-- **Resume PDF** — print button is wired up but there's no PDF to download yet
