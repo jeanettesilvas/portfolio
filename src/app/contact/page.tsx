@@ -16,11 +16,6 @@ const links = [
     display: "@jeanettesilvas",
     href: "https://github.com/jeanettesilvas",
   },
-  {
-    label: "Read.cv",
-    display: "/jeanette",
-    href: "https://read.cv/jeanette",
-  },
 ];
 
 export default function ContactPage() {
@@ -37,8 +32,7 @@ export default function ContactPage() {
             Hiring for design engineering?
           </h1>
           <p className="text-muted-foreground max-w-md leading-relaxed">
-            I'm moving toward design engineering full-time. Send me what you're
-            working on.
+            I'm moving toward design engineering full-time. Let's talk.
           </p>
         </header>
 
