@@ -1,20 +1,21 @@
+import Image from "next/image";
 import { Nav } from "@/components/nav";
 
 const principles = [
   {
     n: "01",
     title: "Fidelity is the point.",
-    body: "A design that loses 30% in handoff was 70% to begin with.",
+    body: "If it loses something in handoff, it wasn't finished yet.",
   },
   {
     n: "02",
     title: "Own the whole vertical.",
-    body: 'The same person should answer "why this spacing?" and "why this state?"',
+    body: "Most teams split design and engineering. I don't.",
   },
   {
     n: "03",
     title: "Constraints are the brief.",
-    body: "Platform limitations aren't blockers — they're where the real design decisions live.",
+    body: "Limitations aren't blockers — they're where the real design decisions live.",
   },
   {
     n: "04",
@@ -104,7 +105,16 @@ export default function AboutPage() {
           {/* Right column */}
           <aside className="space-y-8 md:pt-10">
             {/* Portrait */}
-            <Placeholder label="portrait / placeholder" className="aspect-[4/5] w-full" />
+            <div className="relative aspect-[4/5] w-full rounded-sm overflow-hidden">
+              <Image
+                src="/portrait.jpeg"
+                alt="Jeanette Silvas"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 380px"
+                priority
+              />
+            </div>
 
             {/* Now */}
             <div>
