@@ -21,11 +21,11 @@ export default function Home() {
             I work on both sides of that gap. Currently at Amazon, on tools millions of sellers use.
           </p>
           <div className="flex items-center gap-4">
-            <Button size="lg" className="normal-case tracking-normal text-sm" asChild>
-              <a href="#work">See the work →</a>
+            <Button size="lg" className="normal-case tracking-normal text-sm" render={<a href="#work" />}>
+              See the work →
             </Button>
-            <Button size="lg" variant="outline" className="normal-case tracking-normal text-sm" asChild>
-              <a href="/about">About</a>
+            <Button size="lg" variant="outline" className="normal-case tracking-normal text-sm" render={<a href="/about" />}>
+              About
             </Button>
           </div>
         </section>
