@@ -23,9 +23,37 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const baseUrl = "https://www.jeanettesilvas.com"
+
 export const metadata: Metadata = {
-  title: "Jeanette Silvas",
-  description: "Designer and engineer. The handoff between design and engineering is where products lose fidelity.",
+  metadataBase: new URL(baseUrl),
+  title: {
+    default: "Jeanette Silvas",
+    template: "%s — Jeanette Silvas",
+  },
+  description:
+    "Design engineer working across Figma and React. Currently at Amazon, building tools for sellers worldwide.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: baseUrl,
+    siteName: "Jeanette Silvas",
+    title: "Jeanette Silvas — Design Engineer",
+    description:
+      "Design engineer working across Figma and React. Currently at Amazon, building tools for sellers worldwide.",
+    images: [{ url: "/portrait.jpeg", width: 800, alt: "Jeanette Silvas" }],
+  },
+  twitter: {
+    card: "summary",
+    title: "Jeanette Silvas — Design Engineer",
+    description:
+      "Design engineer working across Figma and React. Currently at Amazon, building tools for sellers worldwide.",
+    images: ["/portrait.jpeg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

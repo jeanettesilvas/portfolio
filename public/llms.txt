@@ -1,0 +1,25 @@
+# Jeanette Silvas
+
+Design engineer based in Austin. Working across Figma and React — currently at Amazon on the Product Image Experience team.
+
+## About
+
+I work on both sides of the design-engineering gap. At Amazon that's meant owning high-impact features end-to-end: Figma explorations, frontend spec, and React + TypeScript implementation.
+
+Background: AWS, InVision, Expedia. Degree in Bioengineering from Texas A&M.
+
+## Work
+
+- **Bulk Upload** (Amazon, 2025) — Redesigned the bulk product upload flow. Reduced errors by 34%, doubled completion rate, cut support tickets by 20%.
+- **Image Manager** (Amazon, 2026) — Case study in progress.
+- **Craft Log** (Personal, 2026) — Live app at craftlog.app.
+
+## Stack
+
+React, TypeScript, Next.js, Tailwind CSS, Figma
+
+## Contact
+
+- Email: jeanettesilvas.dev@gmail.com
+- LinkedIn: https://www.linkedin.com/in/jeanettesilvas
+- GitHub: https://github.com/jeanettesilvas

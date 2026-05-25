@@ -1,4 +1,11 @@
-import Link from "next/link";
+import type { Metadata } from "next"
+import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Work",
+  description:
+    "Selected design engineering work — Bulk Upload, Image Manager, and Craft Log.",
+};
 import { Nav } from "@/components/nav";
 
 const projects = [

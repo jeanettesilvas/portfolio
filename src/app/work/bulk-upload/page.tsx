@@ -1,4 +1,11 @@
+import type { Metadata } from "next"
 import { Nav } from "@/components/nav"
+
+export const metadata: Metadata = {
+  title: "Bulk Upload",
+  description:
+    "How I redesigned Amazon's bulk product upload flow — reducing errors by 34% and doubling completion rate.",
+}
 import { TableOfContents } from "@/components/work/toc"
 import { CaseStudyTabs } from "@/components/work/case-study-tabs"
 import { cn } from "@/lib/utils"

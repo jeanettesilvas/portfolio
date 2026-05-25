@@ -1,6 +1,26 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Nav } from "@/components/nav"
 import { Button } from "@/components/ui/button"
+
+export const metadata: Metadata = {
+  title: "Jeanette Silvas — Design Engineer",
+  description:
+    "The handoff between design and engineering is where products lose fidelity. I work on both sides of that gap.",
+}
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Jeanette Silvas",
+  url: "https://www.jeanettesilvas.com",
+  jobTitle: "Design Engineer",
+  worksFor: { "@type": "Organization", name: "Amazon" },
+  sameAs: [
+    "https://www.linkedin.com/in/jeanettesilvas",
+    "https://github.com/jeanettesilvas",
+  ],
+}
 
 const projects = [
   { id: 1, href: "/work/bulk-upload", label: "Bulk Upload" },
@@ -11,6 +31,10 @@ const projects = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Nav />
       <main className="px-8 md:px-12">
         {/* Hero */}

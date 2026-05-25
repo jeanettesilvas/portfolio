@@ -1,4 +1,11 @@
-import { Nav } from "@/components/nav";
+import type { Metadata } from "next"
+import { Nav } from "@/components/nav"
+
+export const metadata: Metadata = {
+  title: "Resume",
+  description:
+    "Design engineer resume. Experience at Amazon, AWS, InVision, and Expedia.",
+};
 import { PrintButton } from "@/components/print-button";
 
 const experience = [

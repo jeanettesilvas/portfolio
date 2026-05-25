@@ -1,4 +1,10 @@
+import type { Metadata } from "next"
 import { Nav } from "@/components/nav"
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Get in touch about design engineering roles.",
+}
 
 const links = [
   {

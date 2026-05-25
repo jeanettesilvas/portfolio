@@ -1,4 +1,11 @@
+import type { Metadata } from "next"
 import Image from "next/image"
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Design engineer working across Figma and React. Currently at Amazon's Product Image Experience team.",
+}
 import { Nav } from "@/components/nav"
 
 const principles = [
