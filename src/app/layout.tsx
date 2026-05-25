@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Instrument_Sans, Roboto_Slab } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Footer } from "@/components/footer";
 
 const robotoSlabHeading = Roboto_Slab({
   subsets: ["latin"],
@@ -39,6 +40,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <div className="w-full max-w-6xl mx-auto flex flex-col flex-1">
           {children}
+          <Footer />
         </div>
       </body>
     </html>

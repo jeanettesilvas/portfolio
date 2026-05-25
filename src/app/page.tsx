@@ -15,11 +15,11 @@ export default function Home() {
       <main className="px-8 md:px-12">
         {/* Hero */}
         <section className="pt-8 pb-20">
-          <h1 className="font-heading font-bold text-6xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight mb-6 max-w-5xl">
+          <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-6 max-w-5xl">
             The handoff between design and engineering is where products lose fidelity.
           </h1>
           <p className="text-lg text-muted-foreground mb-10 max-w-lg leading-relaxed">
-            I work on both sides of that gap. Currently at Amazon, on tools millions of sellers use.
+            I work on both sides of that gap — currently at Amazon, building tools for sellers worldwide.
           </p>
           <div className="flex items-center gap-4">
             <Button size="lg" className="normal-case tracking-normal text-sm" render={<a href="/work" />} nativeButton={false}>

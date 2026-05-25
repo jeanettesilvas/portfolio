@@ -8,8 +8,8 @@ const links = [
   },
   {
     label: "LinkedIn",
-    display: "/in/jeanette-silvas",
-    href: "https://linkedin.com/in/jeanette-silvas",
+    display: "/in/jeanettesilvas",
+    href: "https://www.linkedin.com/in/jeanettesilvas",
   },
   {
     label: "GitHub",
