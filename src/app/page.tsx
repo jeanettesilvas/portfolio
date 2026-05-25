@@ -1,10 +1,11 @@
+import Link from "next/link";
 import { Nav } from "@/components/nav";
 import { Button } from "@/components/ui/button";
 
 const projects = [
-  { id: 1 },
-  { id: 2 },
-  { id: 3 },
+  { id: 1, href: "/work/bulk-upload", label: "Bulk Upload" },
+  { id: 2, href: "/work/image-manager", label: "Image Manager" },
+  { id: 3, href: "/work", label: "Craft Log" },
 ];
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
             I work on both sides of that gap. Currently at Amazon, on tools millions of sellers use.
           </p>
           <div className="flex items-center gap-4">
-            <Button size="lg" className="normal-case tracking-normal text-sm" render={<a href="#work" />} nativeButton={false}>
+            <Button size="lg" className="normal-case tracking-normal text-sm" render={<a href="/work" />} nativeButton={false}>
               See the work →
             </Button>
             <Button size="lg" variant="outline" className="normal-case tracking-normal text-sm" render={<a href="/about" />} nativeButton={false}>
@@ -32,14 +33,17 @@ export default function Home() {
 
         {/* Project grid */}
         <section id="work" className="grid grid-cols-1 md:grid-cols-3 gap-5 pb-24">
-          {projects.map(({ id }) => (
-            <div
+          {projects.map(({ id, href, label }) => (
+            <Link
               key={id}
-              className="aspect-[4/3] rounded-sm bg-muted"
+              href={href}
+              className="aspect-[4/3] rounded-sm block hover:opacity-80 transition-opacity"
               style={{
                 backgroundImage:
                   "repeating-linear-gradient(-45deg, transparent, transparent 6px, oklch(0.9 0.003 34.3) 6px, oklch(0.9 0.003 34.3) 7px)",
+                backgroundColor: "oklch(0.96 0.002 17.2)",
               }}
+              aria-label={label}
             />
           ))}
         </section>
