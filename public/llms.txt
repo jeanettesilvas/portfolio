@@ -10,7 +10,7 @@ Background: AWS, InVision, Expedia. Degree in Bioengineering from Texas A&M.
 
 ## Work
 
-- **Bulk Upload** (Amazon, 2025) — Redesigned the bulk product upload flow. Reduced errors by 34%, doubled completion rate, cut support tickets by 20%.
+- **Bulk Image Upload** (Amazon, 2025) — Redesigned the bulk image upload flow. Reduced errors by 34%, doubled completion rate, cut support tickets by 20%.
 - **Image Manager** (Amazon, 2026) — Case study in progress.
 - **Craft Log** (Personal, 2026) — Live app at craftlog.app.
 

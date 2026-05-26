@@ -11,23 +11,23 @@ import { Nav } from "@/components/nav"
 const principles = [
   {
     n: "01",
-    title: "Fidelity is the point.",
+    title: "Fidelity matters to me.",
     body: "If it loses something in handoff, it wasn't finished yet.",
   },
   {
     n: "02",
-    title: "Own the whole vertical.",
-    body: "Most teams split design and engineering. I don't.",
+    title: "I'm drawn to the complicated flows.",
+    body: "The ones that feel like they can't be simplified usually can.",
   },
   {
     n: "03",
-    title: "Constraints are the brief.",
-    body: "Limitations aren't blockers — they're where the real design decisions live.",
+    title: "I like when design and engineering inform each other.",
+    body: "I've worked on both sides, and that perspective makes me better at each one.",
   },
   {
     n: "04",
-    title: "Ship to learn.",
-    body: "A component in production teaches you more than a month in Figma.",
+    title: "Constraints are where the real decisions happen.",
+    body: "Limitations aren't blockers — they're where the interesting design problems live.",
   },
 ]
 
@@ -74,19 +74,16 @@ export default function AboutPage() {
                 About
               </p>
               <h1 className="font-heading font-bold text-5xl md:text-6xl tracking-tight leading-[1.05] mb-6">
-                The handoff is where products lose fidelity.
+                Design and engineering feel like the same job to me.
               </h1>
               <p className="text-base leading-relaxed text-muted-foreground max-w-xl">
-                I work on both sides of that gap. At Amazon that&apos;s meant
-                owning two of our team&apos;s most-used features end-to-end —
-                Figma explorations, frontend spec, React + TypeScript
-                implementation. Same head, both sides.
+                Currently at Amazon, building tools for sellers worldwide.
               </p>
             </header>
 
             {/* Principles */}
             <section>
-              <SectionLabel>Principles</SectionLabel>
+              <SectionLabel>What I care about</SectionLabel>
               <div>
                 {principles.map(({ n, title, body }) => (
                   <div key={n}>

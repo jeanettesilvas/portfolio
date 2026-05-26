@@ -23,7 +23,7 @@ const jsonLd = {
 }
 
 const projects = [
-  { id: 1, href: "/work/bulk-upload", label: "Bulk Upload" },
+  { id: 1, href: "/work/bulk-upload", label: "Bulk Image Upload" },
   { id: 2, href: "/work/image-manager", label: "Image Manager" },
   { id: 3, href: "/work", label: "Craft Log" },
 ]

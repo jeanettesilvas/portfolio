@@ -2,9 +2,9 @@ import type { Metadata } from "next"
 import { Nav } from "@/components/nav"
 
 export const metadata: Metadata = {
-  title: "Bulk Upload",
+  title: "Bulk Image Upload",
   description:
-    "How I redesigned Amazon's bulk product upload flow — reducing errors by 34% and doubling completion rate.",
+    "How I redesigned Amazon's bulk image upload flow — reducing errors by 34% and doubling completion rate.",
 }
 import { TableOfContents } from "@/components/work/toc"
 import { CaseStudyTabs } from "@/components/work/case-study-tabs"
@@ -65,7 +65,7 @@ export default function BulkUploadPage() {
         {/* Page header */}
         <header className="mb-10">
           <h1 className="font-heading font-bold text-5xl tracking-tight mb-2">
-            Bulk Upload
+            Bulk Image Upload
           </h1>
           <p className="text-muted-foreground">
             Amazon · 2024 · design + engineering

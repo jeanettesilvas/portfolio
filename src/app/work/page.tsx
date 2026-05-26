@@ -4,13 +4,13 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Selected design engineering work — Bulk Upload, Image Manager, and Craft Log.",
+    "Selected design engineering work — Bulk Image Upload, Image Manager, and Craft Log.",
 };
 import { Nav } from "@/components/nav";
 
 const projects = [
   {
-    title: "Bulk Upload",
+    title: "Bulk Image Upload",
     company: "Amazon",
     year: "2025",
     href: "/work/bulk-upload",
