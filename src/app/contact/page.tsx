@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import { Nav } from "@/components/nav"
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -27,7 +26,6 @@ const links = [
 export default function ContactPage() {
   return (
     <>
-      <Nav active="Contact" />
       <main className="px-8 md:px-12 pb-24">
         {/* Header */}
         <header className="pt-8 pb-12">

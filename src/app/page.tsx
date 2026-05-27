@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Nav } from "@/components/nav"
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
@@ -34,7 +33,6 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Nav />
       <main className="px-8 md:px-12">
         {/* Hero */}
         <section className="pt-8 pb-20">

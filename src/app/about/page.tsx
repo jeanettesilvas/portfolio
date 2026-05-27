@@ -6,8 +6,6 @@ export const metadata: Metadata = {
   description:
     "Design engineer working across Figma and React. Currently at Amazon's Product Image Experience team.",
 }
-import { Nav } from "@/components/nav"
-
 const principles = [
   {
     n: "01",
@@ -63,7 +61,6 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 export default function AboutPage() {
   return (
     <>
-      <Nav active="About" />
       <main className="px-8 md:px-12 pb-24">
         <div className="pt-8 grid grid-cols-1 md:grid-cols-[1fr_380px] gap-16 items-start">
           {/* Left column */}

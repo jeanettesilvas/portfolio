@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/next"
 import { Footer } from "@/components/footer"
+import { Nav } from "@/components/nav"
 
 const robotoSlabHeading = Roboto_Slab({
   subsets: ["latin"],
@@ -68,6 +69,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <div className="w-full max-w-6xl mx-auto flex flex-col flex-1">
+          <Nav />
           {children}
           <Footer />
         </div>

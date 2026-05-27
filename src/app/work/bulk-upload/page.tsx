@@ -1,6 +1,4 @@
 import type { Metadata } from "next"
-import { Nav } from "@/components/nav"
-
 export const metadata: Metadata = {
   title: "Bulk Image Upload",
   description:
@@ -60,7 +58,6 @@ function SectionLabel({ n }: { n: string }) {
 export default function BulkUploadPage() {
   return (
     <>
-      <Nav active="Work" />
       <div className="px-8 md:px-12 py-10 pb-24">
         {/* Page header */}
         <header className="mb-10">
