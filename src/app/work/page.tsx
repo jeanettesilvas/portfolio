@@ -4,7 +4,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Selected design engineering work — Bulk Image Upload, Image Manager, and Craft Log.",
+    "Selected design engineering work — Bulk Image Upload and Image Manager.",
 };
 import { Nav } from "@/components/nav";
 
@@ -20,12 +20,6 @@ const projects = [
     company: "Amazon",
     year: "2026",
     href: "/work/image-manager",
-  },
-  {
-    title: "Craft Log",
-    company: "Personal",
-    year: "2026",
-    href: "https://craftlog.app",
   },
 ];
 
