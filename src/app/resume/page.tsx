@@ -1,6 +1,4 @@
 import type { Metadata } from "next"
-import { Nav } from "@/components/nav"
-
 export const metadata: Metadata = {
   title: "Resume",
   description:
@@ -53,7 +51,6 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 export default function ResumePage() {
   return (
     <>
-      <Nav active="Resume" />
       <main className="px-8 md:px-12 pb-24 print:px-0 print:pb-0">
         {/* Header */}
         <header className="pt-8 pb-10 flex items-start justify-between">

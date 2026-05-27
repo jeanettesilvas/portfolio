@@ -6,8 +6,6 @@ export const metadata: Metadata = {
   description:
     "Selected design engineering work — Bulk Image Upload and Image Manager.",
 };
-import { Nav } from "@/components/nav";
-
 const projects = [
   {
     title: "Bulk Image Upload",
@@ -26,7 +24,6 @@ const projects = [
 export default function WorkPage() {
   return (
     <>
-      <Nav active="Work" />
       <main className="px-8 md:px-12 pb-24">
         {/* Header */}
         <header className="pt-8 pb-12">
