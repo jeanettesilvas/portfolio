@@ -27,7 +27,7 @@ const principles = [
   },
 ]
 
-const stack = ["React · TypeScript", "Tailwind", "Figma"]
+const stack = ["React · TypeScript", "Tailwind", "Figma", "Kiro", "Claude Code"]
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
