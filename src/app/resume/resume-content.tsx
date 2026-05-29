@@ -31,6 +31,7 @@ const stack = [
   "React · TypeScript · Next.js",
   "Tailwind CSS · CSS-in-JS",
   "Figma · design systems",
+  "Kiro · Claude Code",
 ]
 
 const education = ["B.S. Bioengineering", "Texas A&M University"]
