@@ -10,10 +10,8 @@ import { cn } from "@/lib/utils"
 
 const tocSections = [
   { id: "problem", label: "Problem" },
-  { id: "constraints", label: "Constraints" },
-  { id: "explorations", label: "Explorations" },
-  { id: "figma-code", label: "Figma ⇔ Code" },
   { id: "decisions", label: "Decisions" },
+  { id: "figma-code", label: "Figma ⇔ Code" },
   { id: "outcome", label: "Outcome" },
   { id: "retrospective", label: "Retrospective" },
 ]
@@ -21,8 +19,6 @@ const tocSections = [
 const stack = ["React · TS", "Tailwind", "Figma"]
 
 const outcomes = [
-  { stat: "↓34%", label: "upload errors" },
-  { stat: "↑2.1x", label: "completion rate" },
   { stat: "↓20%", label: "support tickets" },
 ]
 
@@ -103,9 +99,20 @@ export default function BulkUploadPage() {
               />
             </section>
 
-            {/* 02 Figma ⇔ Code */}
-            <section id="figma-code">
+            {/* 02 Decisions */}
+            <section id="decisions">
               <SectionLabel n="02" />
+              <h2 className="font-heading font-bold text-4xl mb-6">Decisions</h2>
+              <div className="space-y-2">
+                <div className="h-px bg-border w-full" />
+                <div className="h-px bg-border w-3/4" />
+                <div className="h-px bg-border w-1/2" />
+              </div>
+            </section>
+
+            {/* 03 Figma ⇔ Code */}
+            <section id="figma-code">
+              <SectionLabel n="03" />
               <h2 className="font-heading font-bold text-4xl mb-6">
                 Figma ⇔ Code
               </h2>
@@ -145,9 +152,9 @@ export default function BulkUploadPage() {
               />
             </section>
 
-            {/* 03 Outcome */}
+            {/* 04 Outcome */}
             <section id="outcome">
-              <SectionLabel n="03" />
+              <SectionLabel n="04" />
               <h2 className="font-heading font-bold text-4xl mb-6">Outcome</h2>
               <div className="grid grid-cols-3 gap-4">
                 {outcomes.map(({ stat, label }) => (
@@ -164,25 +171,18 @@ export default function BulkUploadPage() {
               </div>
             </section>
 
-            {/* Remaining sections — placeholder */}
-            {[
-              { n: "04", id: "constraints", label: "Constraints" },
-              { n: "05", id: "explorations", label: "Explorations" },
-              { n: "06", id: "decisions", label: "Decisions" },
-              { n: "07", id: "retrospective", label: "Retrospective" },
-            ].map(({ n, id, label }) => (
-              <section key={id} id={id}>
-                <SectionLabel n={n} />
-                <h2 className="font-heading font-bold text-4xl mb-6">
-                  {label}
-                </h2>
-                <div className="space-y-2">
-                  <div className="h-px bg-border w-full" />
-                  <div className="h-px bg-border w-3/4" />
-                  <div className="h-px bg-border w-1/2" />
-                </div>
-              </section>
-            ))}
+            {/* 05 Retrospective */}
+            <section id="retrospective">
+              <SectionLabel n="05" />
+              <h2 className="font-heading font-bold text-4xl mb-6">
+                Retrospective
+              </h2>
+              <div className="space-y-2">
+                <div className="h-px bg-border w-full" />
+                <div className="h-px bg-border w-3/4" />
+                <div className="h-px bg-border w-1/2" />
+              </div>
+            </section>
           </main>
         </div>
       </div>
