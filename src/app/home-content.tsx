@@ -1,13 +1,14 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { fadeUp } from "@/lib/animations"
 
 const projects = [
-  { id: 1, href: "/work/bulk-upload", label: "Bulk Image Upload" },
-  { id: 2, href: "/work/image-manager", label: "Image Manager" },
+  { id: 1, href: "/work/bulk-image-upload", label: "Bulk Image Upload", thumbnail: "/decision-1.svg" },
+  { id: 2, href: "/work/image-manager", label: "Image Manager", thumbnail: undefined },
 ]
 
 export function HomeContent() {
@@ -55,18 +56,26 @@ export function HomeContent() {
         id="work"
         className="grid grid-cols-1 md:grid-cols-3 gap-5 pb-24"
       >
-        {projects.map(({ id, href, label }, i) => (
+        {projects.map(({ id, href, label, thumbnail }, i) => (
           <motion.div key={id} {...fadeUp(0.35 + i * 0.1)}>
             <Link
               href={href}
-              className="aspect-4/3 rounded-sm block hover:opacity-80 transition-opacity"
-              style={{
-                backgroundImage:
-                  "repeating-linear-gradient(-45deg, transparent, transparent 6px, oklch(0.9 0.003 34.3) 6px, oklch(0.9 0.003 34.3) 7px)",
-                backgroundColor: "oklch(0.96 0.002 17.2)",
-              }}
+              className="aspect-4/3 rounded-sm block hover:opacity-80 transition-opacity relative overflow-hidden border border-border"
               aria-label={label}
-            />
+            >
+              {thumbnail ? (
+                <Image src={thumbnail} alt={label} fill className="object-cover" />
+              ) : (
+                <div
+                  className="w-full h-full"
+                  style={{
+                    backgroundImage:
+                      "repeating-linear-gradient(-45deg, transparent, transparent 6px, oklch(0.9 0.003 34.3) 6px, oklch(0.9 0.003 34.3) 7px)",
+                    backgroundColor: "oklch(0.96 0.002 17.2)",
+                  }}
+                />
+              )}
+            </Link>
           </motion.div>
         ))}
       </section>
