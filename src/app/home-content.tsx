@@ -8,7 +8,7 @@ import { fadeUp } from "@/lib/animations"
 
 const projects = [
   { id: 1, href: "/work/bulk-image-upload", label: "Bulk Image Upload", thumbnail: "/decision-1.svg" },
-  { id: 2, href: "/work/image-manager", label: "Image Manager", thumbnail: undefined },
+  { id: 2, href: "/work/image-manager", label: "Image Manager", thumbnail: "/image-manager-after.jpg" },
 ]
 
 export function HomeContent() {
@@ -64,7 +64,7 @@ export function HomeContent() {
               aria-label={label}
             >
               {thumbnail ? (
-                <Image src={thumbnail} alt={label} fill className="object-cover" />
+                <Image src={thumbnail} alt={label} fill priority sizes="(max-width: 768px) 100vw, 33vw" className="object-cover object-top" />
               ) : (
                 <div
                   className="w-full h-full"

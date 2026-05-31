@@ -28,10 +28,3 @@ public/         # Static assets
 
 **Design system**
 - [shadcn/ui](https://ui.shadcn.com) with preset `b5YiY7cRhp`, using [Base UI](https://base-ui.com) instead of Radix primitives
-
-## What's in Progress
-
-- **Work card images** — `/work` grid cards use hatched placeholders; need real project screenshots
-- **Homepage project cards** — same hatched placeholders, same need
-- **Bulk Upload case study** — Problem section copy and screenshot, Figma ⇔ Code assets, and the Constraints / Explorations / Decisions / Retrospective sections are all placeholder
-- **Image Manager case study** — page doesn't exist yet
