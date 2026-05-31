@@ -68,7 +68,7 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", instrumentSans.variable, robotoSlabHeading.variable)}
     >
       <body className="min-h-full flex flex-col">
-        <div className="w-full max-w-6xl mx-auto flex flex-col flex-1">
+        <div className="w-full max-w-7xl mx-auto flex flex-col flex-1">
           <Nav />
           {children}
           <Footer />
