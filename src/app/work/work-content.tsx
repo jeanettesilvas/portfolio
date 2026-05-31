@@ -18,7 +18,7 @@ const projects = [
     company: "Amazon",
     year: "2026",
     href: "/work/image-manager",
-    thumbnail: undefined,
+    thumbnail: "/image-manager-after.jpg",
   },
 ]
 
@@ -58,7 +58,9 @@ export function WorkContent() {
                     src={thumbnail}
                     alt={title}
                     fill
-                    className="object-cover"
+                    priority
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-top"
                   />
                 ) : (
                   <div
