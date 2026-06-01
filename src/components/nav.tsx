@@ -4,6 +4,7 @@ import Link from "next/link";
 import { LayoutGroup, motion } from "framer-motion";
 import { useId } from "react";
 import { usePathname } from "next/navigation";
+import { ThemeToggle } from "./theme-toggle";
 
 const links = [
   { label: "Work", href: "/work" },
@@ -54,6 +55,9 @@ export function Nav() {
               </li>
             );
           })}
+          <li>
+            <ThemeToggle />
+          </li>
         </ul>
       </LayoutGroup>
     </nav>

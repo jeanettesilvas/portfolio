@@ -99,7 +99,7 @@ export function AboutContent() {
             className="relative aspect-4/5 w-full rounded-sm overflow-hidden"
           >
             <Image
-              src="/portrait.jpeg"
+              src="/images/portrait.jpeg"
               alt="Jeanette Silvas"
               fill
               className="object-cover"

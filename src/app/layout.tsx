@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/next"
 import { Footer } from "@/components/footer"
 import { Nav } from "@/components/nav"
+import { ThemeProvider } from "@/components/theme-provider"
 
 const robotoSlabHeading = Roboto_Slab({
   subsets: ["latin"],
@@ -42,14 +43,14 @@ export const metadata: Metadata = {
     title: "Jeanette Silvas — Design Engineer",
     description:
       "Design engineer working across Figma and React. Currently at Amazon, building tools for sellers worldwide.",
-    images: [{ url: "/portrait.jpeg", width: 800, alt: "Jeanette Silvas" }],
+    images: [{ url: "/images/portrait.jpeg", width: 800, alt: "Jeanette Silvas" }],
   },
   twitter: {
     card: "summary",
     title: "Jeanette Silvas — Design Engineer",
     description:
       "Design engineer working across Figma and React. Currently at Amazon, building tools for sellers worldwide.",
-    images: ["/portrait.jpeg"],
+    images: ["/images/portrait.jpeg"],
   },
   robots: {
     index: true,
@@ -65,15 +66,25 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", instrumentSans.variable, robotoSlabHeading.variable)}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var s=localStorage.getItem('theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(s===null&&d)){document.documentElement.classList.add('dark');}})();`,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
-        <div className="w-full max-w-7xl mx-auto flex flex-col flex-1">
-          <Nav />
-          {children}
-          <Footer />
-        </div>
-        <Analytics />
+        <ThemeProvider>
+          <div className="w-full max-w-7xl mx-auto flex flex-col flex-1">
+            <Nav />
+            {children}
+            <Footer />
+          </div>
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );

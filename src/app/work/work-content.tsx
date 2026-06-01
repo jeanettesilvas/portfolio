@@ -11,14 +11,18 @@ const projects = [
     company: "Amazon",
     year: "2024–2025",
     href: "/work/bulk-image-upload",
-    thumbnail: "/decision-1.svg",
+    thumbnail: "/images/biu-decision-1.svg",
+    imageClassName: "object-cover object-top",
+    thumbnailOffset: false,
   },
   {
     title: "Image Manager",
     company: "Amazon",
     year: "2026",
     href: "/work/image-manager",
-    thumbnail: "/image-manager-after.jpg",
+    thumbnail: "/images/image-manager-after.svg",
+    imageClassName: "object-cover object-top",
+    thumbnailOffset: true,
   },
 ]
 
@@ -43,7 +47,7 @@ export function WorkContent() {
 
       {/* Card grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        {projects.map(({ title, company, year, href, thumbnail }, i) => (
+        {projects.map(({ title, company, year, href, thumbnail, imageClassName, thumbnailOffset }, i) => (
           <motion.div key={title} {...fadeUp(0.25 + i * 0.1)}>
             <Link
               href={href}
@@ -52,16 +56,29 @@ export function WorkContent() {
               className="border border-border rounded-sm overflow-hidden hover:opacity-80 transition-opacity block"
             >
               {/* Thumbnail */}
-              <div className="w-full aspect-[4/3] relative overflow-hidden">
+              <div className={`w-full aspect-[4/3] relative overflow-hidden${thumbnailOffset ? " bg-white" : ""}`}>
                 {thumbnail ? (
-                  <Image
-                    src={thumbnail}
-                    alt={title}
-                    fill
-                    priority
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover object-top"
-                  />
+                  thumbnailOffset ? (
+                    <div className="absolute" style={{ top: 16, left: 16, width: "100%", height: "100%" }}>
+                      <Image
+                        src={thumbnail}
+                        alt={title}
+                        fill
+                        priority
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className={imageClassName}
+                      />
+                    </div>
+                  ) : (
+                    <Image
+                      src={thumbnail}
+                      alt={title}
+                      fill
+                      priority
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className={imageClassName}
+                    />
+                  )
                 ) : (
                   <div
                     className="w-full h-full"
@@ -76,7 +93,9 @@ export function WorkContent() {
               {/* Card footer */}
               <div className="px-5 pt-4 pb-5">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="font-heading font-bold text-xl">{title}</span>
+                  <span className="font-heading font-bold text-xl">
+                    {title}
+                  </span>
                   <span className="text-sm text-muted-foreground">
                     {company} · {year}
                   </span>
