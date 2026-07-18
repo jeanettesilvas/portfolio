@@ -4,6 +4,7 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { fadeUp } from "@/lib/animations"
 import { TableOfContents } from "@/components/work/toc"
+import { WorkBackLink, ProjectFooterNav } from "@/components/work/project-nav"
 import { cn } from "@/lib/utils"
 
 const tocSections = [
@@ -64,8 +65,11 @@ export function BulkUploadContent() {
     <div className="px-8 md:px-12 py-10 pb-24">
       {/* Page header */}
       <header className="mb-10">
+        <motion.div {...fadeUp(0)} className="mb-4">
+          <WorkBackLink />
+        </motion.div>
         <motion.h1
-          {...fadeUp(0)}
+          {...fadeUp(0.05)}
           className="font-heading font-bold text-5xl tracking-tight mb-2"
         >
           Bulk Image Upload
@@ -363,6 +367,8 @@ export function BulkUploadContent() {
               </p>
             </div>
           </motion.section>
+
+          <ProjectFooterNav current="/work/bulk-image-upload" />
         </main>
       </div>
     </div>

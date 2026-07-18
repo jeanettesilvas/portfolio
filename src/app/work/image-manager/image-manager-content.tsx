@@ -6,6 +6,7 @@ import afterImg from "../../../../public/images/image-manager-after.svg"
 import { motion } from "framer-motion"
 import { fadeUp } from "@/lib/animations"
 import { TableOfContents } from "@/components/work/toc"
+import { WorkBackLink, ProjectFooterNav } from "@/components/work/project-nav"
 
 const tocSections = [
   { id: "problem", label: "Problem" },
@@ -21,6 +22,8 @@ const stack = [
   "Internal design system",
   "Kiro",
 ]
+
+const outcomes = [{ stat: "+$41.46M", label: "GMS (75% significance)" }]
 
 const scrollFadeUp = {
   initial: { opacity: 0, y: 24 },
@@ -38,8 +41,11 @@ export function ImageManagerContent() {
     <div className="px-8 md:px-12 py-10 pb-24">
       {/* Page header */}
       <header className="mb-10">
+        <motion.div {...fadeUp(0)} className="mb-4">
+          <WorkBackLink />
+        </motion.div>
         <motion.h1
-          {...fadeUp(0)}
+          {...fadeUp(0.05)}
           className="font-heading font-bold text-5xl tracking-tight mb-2"
         >
           Image Manager
@@ -148,11 +154,23 @@ export function ImageManagerContent() {
           <motion.section id="outcome" {...scrollFadeUp}>
             <SectionLabel n="03" />
             <h2 className="font-heading font-bold text-4xl mb-6">Outcome</h2>
+            <div className="grid grid-cols-3 gap-4 mb-8">
+              {outcomes.map(({ stat, label }) => (
+                <div
+                  key={stat}
+                  className="border border-border rounded-sm p-6 text-center"
+                >
+                  <p className="font-heading font-bold text-4xl">{stat}</p>
+                  <p className="text-sm text-muted-foreground mt-2">{label}</p>
+                </div>
+              ))}
+            </div>
             <div className="space-y-4 text-base leading-relaxed">
               <p>
-                The redesign was A/B tested against the original. On core
-                business metrics it was neutral — conversion and task completion
-                rates didn&apos;t move meaningfully in either direction.
+                The redesign was A/B tested against the original. The test
+                showed a $41.46M increase in GMS, though at 75% statistical
+                significance — a promising signal rather than a confirmed
+                result.
               </p>
               <p>
                 The more telling signal came from usage data. Sellers interacted
@@ -164,7 +182,8 @@ export function ImageManagerContent() {
               <p>
                 A layout that hadn&apos;t been touched in years, rebuilt to be
                 responsive, accessible, and aligned with the design system — the
-                data didn&apos;t shout, but it didn&apos;t need to.
+                numbers point to real impact, with the caveat that 75%
+                significance is directional rather than definitive.
               </p>
             </div>
           </motion.section>
@@ -198,6 +217,8 @@ export function ImageManagerContent() {
               </p>
             </div>
           </motion.section>
+
+          <ProjectFooterNav current="/work/image-manager" />
         </main>
       </div>
     </div>
