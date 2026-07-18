@@ -54,7 +54,7 @@ export function ResumeContent() {
             Jeanette Silvas
           </h1>
           <p className="text-muted-foreground">
-            Design engineer · Austin · jeanettesilvas.dev@gmail.com
+            Design engineer · Seattle · jeanettesilvas.dev@gmail.com
           </p>
         </motion.div>
         <motion.div {...fadeUp(0.1)} className="print:hidden">
